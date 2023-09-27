@@ -6,20 +6,16 @@
   <title>Document</title>
 </head>
 <body>
-  <div>
-    <form action="/square/results">
-      <div>
-        <label for="square_new">
-          Enter a number
-        </label>    
-      </div>
-      <div>
-        <input id="square_new" type="text" name="user_number" placeholder="What number do you want?">
-      </div>
-      <button class="btn btn-warning">
-       Calculate square
-      </button>
-    </form>
+  <div class="card" style="width: 40rem;">
+    <div class="card-body">
+      <form action="/square/results">
+        <div class="mb-3">
+          <label for="square_new" >Enter a number</label>
+          <input id="square_new" class="form-control" type="text" name="user_number" placeholder="What number do you want to calculate?">
+        </div>
+        <button type="submit" class="btn btn-primary">Calculate square</button>
+      </form>
+    </div>  
   </div>
 </body>
 </html>

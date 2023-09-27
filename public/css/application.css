@@ -2,7 +2,7 @@
   text-align: center;
   justify-content: center;
   margin: auto;
-  margin: 10px;
+  
 }
 
 table {
@@ -15,6 +15,20 @@ table {
  border: 3px solid red;
  border-radius: 20px;
 }*/
+
+.card {
+  margin: 40px auto;
+  justify-self: center;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+nav a {
+  color: red;
+}
 
 h1 {
   color: orange;
