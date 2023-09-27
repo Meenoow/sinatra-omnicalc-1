@@ -42,10 +42,20 @@ get("/payment/new") do
 end
 
 get("/payment/results") do
-  #@the_num = params.fetch("user_number").to_f
-  
-  #@the_result = @the_num ** 0.5
+  @apr = params.fetch("apr").to_f
+  @years = params.fetch("years").to_f
+  @principal = params.fetch("principal").to_f
 
+  monthly_apr = (@apr / 100) / 12.00
+
+  n = @years * 12
+ 
+  numerator = @principal * monthly_apr * (1 + monthly_apr)**n
+  denominator = (1 + monthly_apr)**n - 1
+  @payment = (numerator / denominator).to_f
+  @monthly_payment = "$#{@payment}"
+ 
+  @principal_currency = "$#{@principal}"
   
   erb(:payment_results)
 end
